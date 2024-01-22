@@ -6,6 +6,7 @@ import "./styles.css";
 import { useState } from "react";
 import FinishedDestinationContainer from "./FinishedDestinationContainer";
 import FinishedDestination from "./FinishedDestination";
+import Summary from "./Summary";
 
 const tempDestinations = ["manila", "tokyo", "seoul"];
 const InputDisplayContainer = () => {
@@ -13,6 +14,7 @@ const InputDisplayContainer = () => {
   const [input, setInput] = useState("");
   const [inputExists, setInputExists] = useState(false);
   const [finishedDestinations, setFinishedDestinations] = useState([]);
+  const [summary, setSummary] = useState([]);
 
   const handleAddButtonClick = (e) => {
     e.preventDefault();
@@ -42,6 +44,11 @@ const InputDisplayContainer = () => {
   const handleClearAll = () => {
     setFinishedDestinations([]);
   };
+
+  const handlePrintSummary = () => {
+    const date = new Date();
+  };
+
   return (
     <div className="input-display-container">
       <InputDestination
@@ -54,7 +61,7 @@ const InputDisplayContainer = () => {
         <p className="exist-error">The destination already exists</p>
       )}
       {destinations.length === 0 ? (
-        <p className="exist-error">input something</p>
+        <p className="exist-error">add destination</p>
       ) : (
         <DestinationList>
           {destinations.map((destination, index) => {
@@ -71,7 +78,7 @@ const InputDisplayContainer = () => {
       )}
       <FinishedDestinationContainer>
         {finishedDestinations.length === 0 ? (
-          <p>no finished destinations</p>
+          <p className="exist-error">no finished destinations</p>
         ) : (
           <>
             {finishedDestinations.map((item, index) => {
@@ -80,9 +87,16 @@ const InputDisplayContainer = () => {
             <button className="btn-clr-all" onClick={() => handleClearAll()}>
               Clear
             </button>
+            <button
+              className="btn-clr-all"
+              onClick={() => handlePrintSummary()}
+            >
+              Print Summary
+            </button>
           </>
         )}
       </FinishedDestinationContainer>
+      {!summary && <Summary />}
     </div>
   );
 };

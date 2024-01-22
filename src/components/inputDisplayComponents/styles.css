@@ -28,9 +28,11 @@
   flex-direction: column;
   gap: 10px;
   margin-top: 5px;
-  border: 1px solid rgb(151, 148, 148);
+
   width: 200px;
   overflow: hidden;
+  min-height: 270px;
+  max-width: 320px;
 }
 
 .destination {
@@ -66,7 +68,7 @@
 .finished-destination-container {
   position: absolute;
   top: 60px;
-  right: 40px;
+  right: 80px;
 }
 
 .btn-clr-all {
@@ -77,4 +79,12 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 10px;
+}
+
+.summary {
+  align-self: center;
+  padding: 10px;
+  border: 1px solid rgb(151, 148, 148);
+  min-width: 320px;
+  min-height: 100px;
 }
