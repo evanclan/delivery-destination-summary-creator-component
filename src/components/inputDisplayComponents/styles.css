@@ -1,0 +1,80 @@
+.input-display-container {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  max-width: 400px;
+  min-height: 450px;
+  background-color: rgb(27, 26, 26);
+  color: white;
+  position: relative;
+}
+
+.input {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.exist-error {
+  color: red;
+  font-size: 12px;
+  margin-top: 0px;
+  padding: 0px;
+  align-self: center;
+}
+.destination-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 5px;
+  border: 1px solid rgb(151, 148, 148);
+  width: 200px;
+  overflow: hidden;
+}
+
+.destination {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  border-bottom: 1px solid rgb(151, 148, 148);
+}
+
+.btns {
+  display: flex;
+  gap: 5px;
+  .del-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 10px;
+  }
+  .finished-btn {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 10px;
+  }
+}
+
+.finished-destination-container {
+  position: absolute;
+  top: 60px;
+  right: 40px;
+}
+
+.btn-clr-all {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 10px;
+}

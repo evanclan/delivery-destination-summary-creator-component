@@ -1,11 +1,10 @@
-import './App.css';
-import InputandDisplayContainer from './components.jsx/InputandDisplayContainer';
+import "./App.css";
+import InputDisplayContainer from "./components/inputDisplayComponents/InputDisplayContainer";
 
 function App() {
   return (
     <div className="App">
-      <p>hello</p>
-      <InputandDisplayContainer/>
+      <InputDisplayContainer />
     </div>
   );
 }
